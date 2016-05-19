@@ -3,8 +3,19 @@
     <title>To-Do lists</title>
   </head>
   <body>
+
     <h1>Your To-Do list</h1>
-    <input placeholder="Enter a to-do item" id="id_new_item" />
-    <table id="id_list_table"></table>
+
+    <form method="POST">
+      <input name="item_text" placeholder="Enter a to-do item" id="id_new_item" />
+      {% csrf_token %}
+    </form>
+
+    <table id="id_list_table">
+      <tr>
+        <td>1: {{ new_item_text }}</td>
+      </tr>
+    </table>
+
   </body>
 </html>
