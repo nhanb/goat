@@ -30,3 +30,9 @@ class HomePageTest(TestCase):
                                          {'new_item_text': 'A new list item'},
                                          request=request)
         self.assertEqual(response.content.decode(),  expected_html)
+
+
+class ItemModelTest(TestCase):
+    # TODO
+    # http://chimera.labs.oreilly.com/books/1234000000754/ch05.html#_the_django_orm_and_our_first_model
+    pass
