@@ -1,9 +1,7 @@
 import sys
-from unittest import skip
 
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 
 
 class FunctionalTest(StaticLiveServerTestCase):
@@ -40,3 +38,6 @@ class FunctionalTest(StaticLiveServerTestCase):
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
         self.assertIn(row_text, [row.text for row in rows])
+
+    def get_item_input_box(self):
+        return self.browser.find_element_by_id('id_text')
