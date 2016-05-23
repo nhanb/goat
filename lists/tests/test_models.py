@@ -29,7 +29,7 @@ class ItemModelTest(TestCase):
         Item.objects.create(list=list_, text='bla')
 
         with self.assertRaises(ValidationError):
-            item = Item.objects.create(list=list_, text='bla')
+            item = Item(list=list_, text='bla')
             item.full_clean()
 
     def test_CAN_save_same_item_to_different_lists(self):
