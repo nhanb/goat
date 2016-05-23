@@ -1,6 +1,9 @@
+colorama==0.3.7
 Django==1.9.6
 flake8==2.5.4
+green==2.4.1
 mccabe==0.4.0
 pep8==1.7.0
 pyflakes==1.0.0
+python-termstyle==0.1.10
 selenium==2.53.2
